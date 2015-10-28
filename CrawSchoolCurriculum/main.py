@@ -7,6 +7,8 @@ import json
 
 from bs4 import BeautifulSoup
 
+count = 0
+
 def Opener( head ):
     cookie = http.cookiejar.CookieJar()
     processor = urllib.request.HTTPCookieProcessor( cookie )
@@ -20,6 +22,8 @@ def Opener( head ):
 
 def get_code( year, semester, WebPDC99, WebColCode1, WebDomainNo1, Grade1 ):
     #preset
+    global count 
+    count += 1
     url = "https://web085003.adm.ncyu.edu.tw/pub_clata3.aspx"
     postDict = {
         'WebPid1' : '',
@@ -33,32 +37,39 @@ def get_code( year, semester, WebPDC99, WebColCode1, WebDomainNo1, Grade1 ):
     }
     header = {
     }
-    dep_num = []
 
     opener = Opener( header )
     postData = urllib.parse.urlencode(postDict).encode()
     data = opener.open( url, postData ).read()
-    with open( 'out', 'w', encoding='UTF-8' ) as file:
-        file.write( data.decode( 'UTF-8', 'replace' ) )
-    print( data.decode('big5','replace') )
-    soup = BeautifulSoup( data.decode( 'big5','replace' ), "lxml" )
-    tblh = soup.find_all( 'table' )
-    tblh = tblh[3]
+    # print( data.decode('big5','replace') )
+    
+    soup = BeautifulSoup( data.decode( 'big5','replace' ), "html5lib" )
+    
+    first = True
+    for child in soup.body.children:
+        if child.name == 'table' or child.name == u'table':
+            if first:
+                first = False
+                continue
+            tblh = child
+            break
+        
     trs = tblh.find_all('tr')
-    print( len(trs ) )
     if trs[1].find( 'td' ).get_text() == '\n查無任何開課資料!!\n':
         return
     #sql = 'INSERT INTO NoS VALUES ({seq})'.format( seq = ','.join( ['?']*23 ) )
-
+    data = []
     for index in range( 1, len(trs) ):
         tds = trs[index].find_all('td')
         part = [];
         for index2 in range( len(tds) ):
             part.append( tds[index2].get_text() )
+        data.append( part )
         # cursor.execute( sql, part )
         # print( part )
         # conn.commit()
-    return part
+    
+    return data
 
 def main():
     # preset
@@ -84,14 +95,16 @@ def main():
                 for grade in range( 1, 7+1 ):
                     print( "{}, {}, {}".format( code2, domain, grade ) )
                     WebColCode1 = get_code( 104, 1, WebTPcode1[0].split(':')[1], code2, domain, grade )
-                    print( WebColCode1 )
+                    if WebColCode1 == None:
+                        continue
+                    for data in WebColCode1:
+                        print( data )
     return
     url = "https://web085003.adm.ncyu.edu.tw/pub_depta2.aspx"
     conn = sqlite3.connect( 'NCYUCurriculum.db' )
     cursor = conn.cursor()
 
 
-    count = 0
     for year in range( 104, 104+1 ):
         for semester in range( 1, 7+1 ):
             cursor.execute( '''CREATE TABLE IF NOT EXISTS {} (
@@ -139,7 +152,6 @@ def main():
                 tblh = soup.find_all( 'table' )
                 tblh = tblh[3];
                 trs = tblh.find_all('tr')
-                count += 1
                 if trs[1].find( 'td' ).get_text() == '\n查無任何開課資料!!\n':
                     continue
                 #sql = 'INSERT INTO NoS VALUES ({seq})'.format( seq = ','.join( ['?']*23 ) )
@@ -153,6 +165,5 @@ def main():
                     print( part )
                     # conn.commit()
     # conn.close()
-    print( count )
 if __name__ == '__main__':
     main()

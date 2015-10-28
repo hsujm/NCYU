@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><Head>
+<TITLE>�հȦ�F�t�ΡG�����O�d�߽ҵ{</TITLE>
+<link rel="stylesheet" href="/ncyucss.css" type="text/css" />
+<META HTTP-EQUIV="X-UA-Compatible" content="IE=EmulateIE7" />
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=BIG5" />
+<META HTTP-EQUIV="expires" CONTENT="0" />
+<META HTTP-EQUIV="pragma" CONTENT="no-cache" />
+<META HTTP-EQUIV="cache-control" CONTENT="no-cache" />
+
+<DIV ID="waitDiv" style="position:absolute;left:35%;top:35%;visibility:hidden">
+<CENTER><TABLE cellpadding=6 border=2 bgcolor="#9999FF" bordercolor="#000000">
+<TR><TD align="center"><BR><P><FONT face="�з���" size="6">�t�γB�z��...</FONT><P>
+
+<IMG src="await.gif" border="0"><P><FONT face="�з���" size="4">�еy��...</FONT><P>
+</TD></TR></TABLE></CENTER></DIV>
+
+<SCRIPT LANGUAGE="JavaScript">
+var DHTML = (document.getElementById || document.all || document.layers);
+
+function ap_getObj(name) {
+  if (document.getElementById) {
+    return document.getElementById(name).style;
+  }
+  else if (document.all) {
+    return document.all[name].style;
+  }
+  else if (document.layers) {
+    return document.layers[name];
+  }
+}
+
+function ap_showWaitMessage(div,flag) {
+  if (!DHTML) return;
+  var x = ap_getObj(div);
+  x.visibility = (flag) ? 'visible':'hidden';
+  if(! document.getElementById) if(document.layers) x.left=280/2;
+  return true;
+}
+
+ap_showWaitMessage('waitDiv', 1);
+</SCRIPT>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+ var entered = new Date()
+ function DigitalTime2()
+ {
+  var now = new Date()
+  var s = Math.floor((now.getTime() - entered.getTime()) / 1000)
+  var m = Math.floor(s / 60)
+  var h = Math.floor(s / 3600)
+  var s = s % 60
+  var m = m % 60
+  var h = h % 24
+  var time = ((h < 10) ? "0" : " ") + h
+  time += ((m < 10) ? ":0" : ":") + m
+  time += ((s < 10) ? ":0" : ":") + s
+  LiveClock2.innerHTML = time
+  setTimeout("DigitalTime2()",1000)
+ }
+//-->
+</SCRIPT>
+
+</HEAD>
+<Font id="HtmlHeader">
+<BODY background="/inmtextb.gif" onload="DigitalTime2()">
+
+<BR><H1>�հȦ�F�t�ΡG�����O�d�߽ҵ{</H1>
+<HR>�{�b�Ǧ~�B�Ǵ��G<Font color="green">�@�ʹs�|�Ǧ~�ײĤ@�Ǵ�</font>�A��ҾǦ~�B�Ǵ��G<Font color="blue">�@�ʹs�|�Ǧ~�ײĤ@�Ǵ�</font><BR>
+(�i�J�������ɶ��G����104�~10��26�� �P���@ 15:56:31�A���d�ɶ��G<SPAN ID="LiveClock2"></SPAN>)<HR>
+
+<P><TABLE border="0" align="center" cellspacing="0" cellpadding="0" width="75%">
+<TR><UL>
+
+</UL></TR>
+</TABLE>
+</Font>
+
+<!-- hidden-value-WebPid1  :  -->
+<!-- hidden-value-Language : zh-TW -->
+<!-- hidden-value-WebYear1 : 104 -->
+<!-- hidden-value-WebTerm1 : 1 -->
+<!-- hidden-value-WebPDC99 :  -->
+
+<P>
+<TABLE border="0" align="center" cellpadding="1" cellspacing="0" width="99%">
+<TR><TD>�ҷj�M�줧�i��ҵ{�]�@�ʹs�|�Ǧ~�ײĤ@�Ǵ��^
+
+</TD></TR>
+<TR><TD>�W�ҾǨ�G研究所博士班</TD></TR>
+<TR><TD>�W�Ҩt�ҡG企業管理學系博士班</TD></TR>
+<TR><TD>������O�G一般專業課程(含專業必修及專業選修課程)</TD></TR>
+<TR><TD>�ҵ{���O�G專業必修課程</TD></TR>
+</TABLE>
+
+<TABLE border="1" align="center" cellpadding="1" cellspacing="0" width="99%">
+<TR><TD align="center" bgcolor="BEEC87">�}�Ҩt��</TD>
+<TD align="center" bgcolor="BEEC87">�}�ҧǸ�</TD>
+<TD align="center" bgcolor="BEEC87">�ҵ{�W��</TD>
+<TD align="center" bgcolor="BEEC87">�ä[�Ҹ�</TD>
+<TD align="center" bgcolor="BEEC87">�}�ҳ��</TD>
+<TD align="center" bgcolor="BEEC87">�W�Ҿǰ|</TD>
+<TD align="center" bgcolor="BEEC87">�W�ҲէO</TD>
+<TD align="center" bgcolor="BEEC87">�A�Φ~��</TD>
+<TD align="center" bgcolor="BEEC87">�W�үZ�O</TD>
+<TD align="center" bgcolor="BEEC87">�ҵ{�קO</TD>
+<TD align="center" bgcolor="BEEC87">�Ǥ���</TD>
+<TD align="center" bgcolor="BEEC87">�ɼ�</TD>
+<TD align="center" bgcolor="BEEC87">�Ǵ���</TD>
+<TD align="center" bgcolor="BEEC87">�½����O</TD>
+<TD align="center" bgcolor="BEEC87">�Ƶ�</TD>
+<TD align="center" bgcolor="BEEC87">�½ұЮv</TD>
+<TD align="center" bgcolor="BEEC87">�W�ҬP��</TD>
+<TD align="center" bgcolor="BEEC87">�W�Ҹ`��</TD>
+<TD align="center" bgcolor="BEEC87">�W�ұЫ�</TD>
+<TD align="center" bgcolor="BEEC87">�հ�</TD>
+<TD align="center" bgcolor="BEEC87">���פH��</TD>
+<TD align="center" bgcolor="BEEC87">��W�H��</TD>
+<TD align="center" bgcolor="BEEC87">�������</TD>
+</TR>
+
+<TR><TD COLSPAN="23" ALIGN="CENTER" bgcolor="khaki">
+<BR><H3>�d�L����}�Ҹ��!!</H3>
+</TD></TR>
+</TABLE><BR>
+
+<P>
+<HR><P><TABLE border="0" align="center" cellpadding="1" cellspacing="0" width="99%">
+<TR><TD>�U�`���_���ɶ����]�@�ʹs�|�Ǧ~�ײĤ@�Ǵ��^</TD></TR>
+</TABLE>
+
+<TABLE border="1" align="center" cellpadding="1" cellspacing="0" width="99%">
+<TR><TD align="center">�`��</TD>
+<TD align="center">1</TD>
+<TD align="center">2</TD>
+<TD align="center">3</TD>
+<TD align="center">4</TD>
+<TD align="center">F</TD>
+<TD align="center">5</TD>
+<TD align="center">6</TD>
+<TD align="center">7</TD>
+<TD align="center">8</TD>
+<TD align="center">9</TD>
+<TD align="center">A</TD>
+<TD align="center">B</TD>
+<TD align="center">C</TD>
+<TD align="center">D</TD>
+</TR>
+<TR><TD align="center">�}�l</TD>
+<TD align="center">08:10</TD>
+<TD align="center">09:10</TD>
+<TD align="center">10:10</TD>
+<TD align="center">11:10</TD>
+<TD align="center">12:10</TD>
+<TD align="center">13:20</TD>
+<TD align="center">14:20</TD>
+<TD align="center">15:20</TD>
+<TD align="center">16:20</TD>
+<TD align="center">17:20</TD>
+<TD align="center">18:30</TD>
+<TD align="center">19:20</TD>
+<TD align="center">20:10</TD>
+<TD align="center">21:00</TD>
+</TR>
+<TR><TD align="center">����</TD>
+<TD align="center">09:00</TD>
+<TD align="center">10:00</TD>
+<TD align="center">11:00</TD>
+<TD align="center">12:00</TD>
+<TD align="center">13:00</TD>
+<TD align="center">14:10</TD>
+<TD align="center">15:10</TD>
+<TD align="center">16:10</TD>
+<TD align="center">17:10</TD>
+<TD align="center">18:10</TD>
+<TD align="center">19:15</TD>
+<TD align="center">20:05</TD>
+<TD align="center">20:55</TD>
+<TD align="center">21:45</TD>
+</TR>
+</TABLE>
+
+<P><Font id="HtmlFooter">
+<HR>
+<IMG src="/m-goback-old.gif" border="0" alt="�^�W�@��" onclick="javascript:history.go(-1)"></Font>
+
+
+<SCRIPT language="javascript">
+ap_showWaitMessage('waitDiv', 0);
+</SCRIPT>
+
+
+</BODY>
+</HTML>
