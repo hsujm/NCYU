@@ -43,6 +43,8 @@ class Curriculum( object ):
         data.append( self.get_pub_clata3() )
         data.append( self.get_pub_clata4() )
         data.append( self.get_pub_clata5() )
+        with open( 'data.txt', 'w', encoding='UTF-8' ) as file:
+            file.write( json.dumps( data, indent = 4 ) )
         
     def get_pub_clata3( self ):
         url = "https://web085003.adm.ncyu.edu.tw/pub_clata3.aspx"
@@ -85,6 +87,7 @@ class Curriculum( object ):
     
         opener = self._Opener( header )
         postData = urllib.parse.urlencode(postDict).encode()
+        
         data = opener.open( url, postData, 5 ).read()
     
         soup = BeautifulSoup( data.decode( 'big5','replace' ), "html5lib" )
