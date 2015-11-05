@@ -61,7 +61,7 @@ class Curriculum( object ):
                         postDict = {
                             'WebPid1' : '',
                             'Language' : 'zh-TW',
-                            'WebYear1' : str( year ),
+                            'WebYear1' : str( year ).zfill(3),
                             'WebTerm1' : str( semester ),
                             'WebPDC99' : self.WebTPcode1[0].split(':')[1],
                             'WebDiviCode1': code2,
@@ -133,7 +133,7 @@ class Curriculum( object ):
 
 if __name__ == '__main__':
     curr = Curriculum()
-    for year in range( 103, 89, -1 ):
+    for year in range( 99, 89, -1 ):
         for semester in [ 1, 2 ]:
             if year == 103 and semester == 2:
                 continue
